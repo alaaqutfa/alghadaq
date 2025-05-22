@@ -538,56 +538,6 @@ if (isset($_POST['sendMail'])) {
             </div>
         </section><!-- End Portfolio Section -->
 
-
-        <!-- ======= Our Team Section ======= -->
-        <section id="team" class="team">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Our Team</h2>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
-                        <div class="member">
-                            <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Soran Salim</h4>
-                                <span>General Manager</span>
-                                <span>Email: soransalimmohammed@gmail.com</span>
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member">
-                            <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Emad Adbullah Names</h4>
-                                <span>Chief Executive Officer</span>
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End Our Team Section -->
-
         <!-- ======= Contact Us Section ======= -->
         <section id="contact" class="contact">
             <div class="container" data-aos="fade-up">
