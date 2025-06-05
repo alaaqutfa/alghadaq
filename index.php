@@ -85,10 +85,9 @@
                 <i class="bi bi-phone-fill phone-icon"></i><a href="tel:+971581587300">+971 58 158 7300</a>
             </div>
             <div class="social-links d-none d-md-block">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+                <a href="https://www.facebook.com/share/1AY9Lgrpmp/?mibextid=wwXIfr" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/wattantrading/?hl=en" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.tiktok.com/@wattan.dubai?_t=zs-8wqgkmunrml&_r=1" class="linkedin"><i class="bi bi-tiktok"></i></i></a>
             </div>
         </div>
     </section>
@@ -712,12 +711,12 @@
                                     required></textarea>
                             </div>
                             <div class="my-3">
-                                <div class="loading                                                                                                                                                                                                             <?php if ($successSendMail != "") {echo " d-block";}?>">Loading
+                                <div class="loading                                                                                                                                                                                                                                                                <?php if ($successSendMail != "") {echo " d-block";}?>">Loading
                                 </div>
-                                <div class="error-message                                                                                                                                                                                                                                     <?php if ($successSendMail == " showError") {echo "d-block";}
-                                                                                                                                                                                                                                     ?>">Message was not sent, please try again</div>
-                                <div class="sent-message                                                                                                                                                                                                                                 <?php if ($successSendMail == " showSuccess") {echo "d-block";}
-                                                                                                                                                                                                                                 ?>">Your message has been sent. Thank you!</div>
+                                <div class="error-message                                                                                                                                                                                                                                                                                              <?php if ($successSendMail == " showError") {echo "d-block";}
+                                                                                                                                                                                                                                                                                              ?>">Message was not sent, please try again</div>
+                                <div class="sent-message                                                                                                                                                                                                                                                                                         <?php if ($successSendMail == " showSuccess") {echo "d-block";}
+                                                                                                                                                                                                                                                                                         ?>">Your message has been sent. Thank you!</div>
                             </div>
                             <div class="text-center"><button class="btn btn-success sendMailBtn" name="sendMail"
                                     type="submit">Send Message</button></div>
