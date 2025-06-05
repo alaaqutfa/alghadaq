@@ -1,44 +1,44 @@
 <?php
-include 'config/databaseconnect.php';
-$successSendMail = "";
-session_start();
-if (!isset($_SESSION['token'])) {
-    $_SESSION['token'] = md5(uniqid(mt_rand(), true));
-}
-if (isset($_POST['sendMail'])) {
-    // Get form data
-    $data = [
-        "name" => filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
-        "email" => filter_var($_POST['email'], FILTER_SANITIZE_EMAIL),
-        "subject" => filter_var($_POST['subject'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
-        "message" => filter_var($_POST['message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
-    ];
-    $name = $data['name'];
-    $email = $data['email'];
-    $message = $data['message'];
-    // Set recipient email address
-    $to = "soransalimmohammed@gmail.com";
-
-    // Set email subject
-    $subject = $data['subject'];
-
-    // Construct email body
-    $body = "Name: $name\n";
-    $body .= "Email: $email\n\n";
-    $body .= "Message:\n$message";
-
-    // Set headers
-    $headers = "From: $name <$email>\r\n";
-    $headers .= "Reply-To: $email\r\n";
-
-    // Send email
-    if (mail($to, $subject, $body, $headers)) {
-        $successSendMail = "showSuccess";
-        
-    } else {
-        $successSendMail = "showError";
+    include 'config/databaseconnect.php';
+    $successSendMail = "";
+    session_start();
+    if (! isset($_SESSION['token'])) {
+        $_SESSION['token'] = md5(uniqid(mt_rand(), true));
     }
-}
+    if (isset($_POST['sendMail'])) {
+        // Get form data
+        $data = [
+            "name"    => filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+            "email"   => filter_var($_POST['email'], FILTER_SANITIZE_EMAIL),
+            "subject" => filter_var($_POST['subject'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+            "message" => filter_var($_POST['message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+        ];
+        $name    = $data['name'];
+        $email   = $data['email'];
+        $message = $data['message'];
+        // Set recipient email address
+        $to = "soransalimmohammed@gmail.com";
+
+        // Set email subject
+        $subject = $data['subject'];
+
+        // Construct email body
+        $body = "Name: $name\n";
+        $body .= "Email: $email\n\n";
+        $body .= "Message:\n$message";
+
+        // Set headers
+        $headers = "From: $name <$email>\r\n";
+        $headers .= "Reply-To: $email\r\n";
+
+        // Send email
+        if (mail($to, $subject, $body, $headers)) {
+            $successSendMail = "showSuccess";
+
+        } else {
+            $successSendMail = "showError";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -117,9 +117,7 @@ if (isset($_POST['sendMail'])) {
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                     <li><a class="nav-link scrollto" href="https://watan.website/">@watan.website</a></li>
 
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -435,28 +433,16 @@ if (isset($_POST['sendMail'])) {
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2 style="color: #007bff;">Portfolio</h2>
+                    <h2>Portfolio</h2>
                 </div>
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <img src="assets/img/portfolio/1.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/Aljazeera-mockup.png" class="img-fluid" alt="Aljazeera" />
                         <div class="portfolio-info">
-                            <h4 style="color: #28a745;">Watan Merchants</h4>
-                            <a href="assets/img/portfolio/1.jpg" data-gallery="portfolioGallery"
-                                class="portfolio-lightbox preview-link" title="Watan Merchants"><i
-                                    class="bx bx-plus"></i></a>
-                            <a href="https://watan.dev" target="_blank" class="details-link" title="More Details"><i
-                                    class="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <img src="assets/img/portfolio/2.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4 style="color: #28a745;">Watan Ecommerce</h4>
-                            <a href="assets/img/portfolio/2.jpg" data-gallery="portfolioGallery"
-                                class="portfolio-lightbox preview-link" title="Watan Ecommerce"><i
+                            <h4>Aljazeera Machinery</h4>
+                            <a href="assets/img/portfolio/Aljazeera-mockup.png" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="Aljazeera Machinery"><i
                                     class="bx bx-plus"></i></a>
                             <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
                                     class="bx bx-link"></i></a>
@@ -464,19 +450,151 @@ if (isset($_POST['sendMail'])) {
                     </div>
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <img src="assets/img/portfolio/3.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/Art-tech.png" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4 style="color: #28a745;">Watan Services</h4>
-                            <a href="assets/img/portfolio/3.jpg" data-gallery="portfolioGallery"
+                            <h4>Art-tech</h4>
+                            <a href="assets/img/portfolio/Art-tech.png" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="Art-tech"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/Limitless-tech.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Limitless-tech</h4>
+                            <a href="assets/img/portfolio/Limitless-tech.png" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="Limitless-tech"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/shaheenecommerce.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Shaheen eCommerce</h4>
+                            <a href="assets/img/portfolio/shaheenecommerce.png" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="Shaheen eCommerce"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/syriansouq.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Syrian Souq eCommerce</h4>
+                            <a href="assets/img/portfolio/syriansouq.png" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="Syrian Souq eCommerce"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/watan.dev.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Watan Services</h4>
+                            <a href="assets/img/portfolio/watan.dev.png" data-gallery="portfolioGallery"
                                 class="portfolio-lightbox preview-link" title="Watan Services"><i
                                     class="bx bx-plus"></i></a>
                             <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
                                     class="bx bx-link"></i></a>
                         </div>
                     </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/watanecommerce.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Watan eCommerce</h4>
+                            <a href="assets/img/portfolio/watanecommerce.png" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="Watan eCommerce"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/world-gate.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>World Gate - Meical</h4>
+                            <a href="assets/img/portfolio/world-gate.png" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="World Gate - Meical"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/shaheen.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Shaheen eCommerce App</h4>
+                            <a href="assets/img/portfolio/shaheen.png" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="Shaheen eCommerce App"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/watan.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Watan eCommerce App</h4>
+                            <a href="assets/img/portfolio/watan.png" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="Watan eCommerce App"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/watan-agent.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Watan Agent Services App</h4>
+                            <a href="assets/img/portfolio/watan-agent.png" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="Watan Agent Services App"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/watan-users.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Watan Users Services App</h4>
+                            <a href="assets/img/portfolio/watan-users.png" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="Watan Users Services App"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/watan-supplier.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Watan Supplier App</h4>
+                            <a href="assets/img/portfolio/watan-supplier.png" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="Watan Agent Services App"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row mt-5">
+                <!-- <div class="row mt-5">
                     <div class="col-lg-12">
                         <div class="content">
                             <h3 style="color: #007bff;">About Watan E-commerce</h3>
@@ -494,7 +612,7 @@ if (isset($_POST['sendMail'])) {
                             <p>To enhance user experience, two dedicated apps have been developed:</p>
                           <ul>
     <li><strong>Watan Supplier (A):</strong> Designed for suppliers, offering advanced tools for product management, order tracking, data analysis, and effective payment management.
-        <a href="https://watan.website/seller/login" target="_blank" class="btn btn-sm btn-outline-primary ml-2">Visit Supplier App 
+        <a href="https://watan.website/seller/login" target="_blank" class="btn btn-sm btn-outline-primary ml-2">Visit Supplier App
           <img src="assets/img/watanlogo.png" alt="Watan Logo" class="logo-img">
         </a>
     </li>
@@ -533,7 +651,7 @@ if (isset($_POST['sendMail'])) {
 
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </section><!-- End Portfolio Section -->
@@ -594,12 +712,12 @@ if (isset($_POST['sendMail'])) {
                                     required></textarea>
                             </div>
                             <div class="my-3">
-                                <div class="loading <?php if($successSendMail != "") {echo " d-block";} ?>">Loading
+                                <div class="loading                                                                                                                                                                                                             <?php if ($successSendMail != "") {echo " d-block";}?>">Loading
                                 </div>
-                                <div class="error-message <?php if($successSendMail == " showError") {echo "d-block" ;}
-                                    ?>">Message was not sent, please try again</div>
-                                <div class="sent-message <?php if($successSendMail == " showSuccess") {echo "d-block" ;}
-                                    ?>">Your message has been sent. Thank you!</div>
+                                <div class="error-message                                                                                                                                                                                                                                     <?php if ($successSendMail == " showError") {echo "d-block";}
+                                                                                                                                                                                                                                     ?>">Message was not sent, please try again</div>
+                                <div class="sent-message                                                                                                                                                                                                                                 <?php if ($successSendMail == " showSuccess") {echo "d-block";}
+                                                                                                                                                                                                                                 ?>">Your message has been sent. Thank you!</div>
                             </div>
                             <div class="text-center"><button class="btn btn-success sendMailBtn" name="sendMail"
                                     type="submit">Send Message</button></div>
@@ -705,7 +823,7 @@ if (isset($_POST['sendMail'])) {
 
     <!-- Template Main JS File -->
     <script>
-        <?php include "assets/js/main.js";?>
+        <?php include "assets/js/main.js"; ?>
     </script>
 
 </body>
