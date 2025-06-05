@@ -88,7 +88,7 @@
                 <a href="https://www.facebook.com/share/1AY9Lgrpmp/?mibextid=wwXIfr" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.instagram.com/wattantrading/?hl=en" class="instagram"><i class="bi bi-instagram"></i></a>
                 <a href="https://www.tiktok.com/@wattan.dubai?_t=zs-8wqgkmunrml&_r=1" class="linkedin"><i class="bi bi-tiktok"></i></i></a>
-            </div>
+            </div> 
         </div>
     </section>
 
