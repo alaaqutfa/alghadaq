@@ -102,7 +102,7 @@
             </div>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li class="m-2">
+                    <!-- <li class="m-2">
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -113,7 +113,7 @@
                                 <li><a class="dropdown-item" href="index-ar.php">العربية</a></li>
                             </ul>
                         </div>
-                    </li>
+                    </li> -->
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
