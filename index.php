@@ -88,7 +88,7 @@
                 <a href="https://www.facebook.com/share/1AY9Lgrpmp/?mibextid=wwXIfr" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.instagram.com/wattantrading/?hl=en" class="instagram"><i class="bi bi-instagram"></i></a>
                 <a href="https://www.tiktok.com/@wattan.dubai?_t=zs-8wqgkmunrml&_r=1" class="linkedin"><i class="bi bi-tiktok"></i></i></a>
-            </div> 
+            </div>
         </div>
     </section>
 
@@ -591,6 +591,30 @@
                                     class="bx bx-link"></i></a>
                         </div>
                     </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app d-flex justify-content-center align-items-center">
+                        <img src="assets/img/portfolio/fingerprint-application.jpg" style="height:266px;" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Fingerprint App</h4>
+                            <a href="assets/img/portfolio/fingerprint-application.jpg" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="Fingerprint App"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app d-flex justify-content-center align-items-center">
+                        <img src="assets/img/portfolio/hebaa-org.png" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Hebaa Org</h4>
+                            <a href="assets/img/portfolio/hebaa-org.png" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox preview-link" title="Hebaa Org"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- <div class="row mt-5">
@@ -711,12 +735,12 @@
                                     required></textarea>
                             </div>
                             <div class="my-3">
-                                <div class="loading                                                                                                                                                                                                                                                                <?php if ($successSendMail != "") {echo " d-block";}?>">Loading
+                                <div class="loading                                                                                                                                                                                                                                                                                                                   <?php if ($successSendMail != "") {echo " d-block";}?>">Loading
                                 </div>
-                                <div class="error-message                                                                                                                                                                                                                                                                                              <?php if ($successSendMail == " showError") {echo "d-block";}
-                                                                                                                                                                                                                                                                                              ?>">Message was not sent, please try again</div>
-                                <div class="sent-message                                                                                                                                                                                                                                                                                         <?php if ($successSendMail == " showSuccess") {echo "d-block";}
-                                                                                                                                                                                                                                                                                         ?>">Your message has been sent. Thank you!</div>
+                                <div class="error-message                                                                                                                                                                                                                                                                                                                                                       <?php if ($successSendMail == " showError") {echo "d-block";}
+                                                                                                                                                                                                                                                                                                                                                       ?>">Message was not sent, please try again</div>
+                                <div class="sent-message                                                                                                                                                                                                                                                                                                                                                 <?php if ($successSendMail == " showSuccess") {echo "d-block";}
+                                                                                                                                                                                                                                                                                                                                                 ?>">Your message has been sent. Thank you!</div>
                             </div>
                             <div class="text-center"><button class="btn btn-success sendMailBtn" name="sendMail"
                                     type="submit">Send Message</button></div>
