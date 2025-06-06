@@ -611,7 +611,7 @@
                             <a href="assets/img/portfolio/hebaa-org.png" data-gallery="portfolioGallery"
                                 class="portfolio-lightbox preview-link" title="Hebaa Org"><i
                                     class="bx bx-plus"></i></a>
-                            <a href="https://watan.website" target="_blank" class="details-link" title="More Details"><i
+                            <a href="https://hebaa.org" target="_blank" class="details-link" title="More Details"><i
                                     class="bx bx-link"></i></a>
                         </div>
                     </div>
