@@ -1,45 +1,45 @@
-<?php
-    include 'config/databaseconnect.php';
-    $successSendMail = "";
-    session_start();
-    if (! isset($_SESSION['token'])) {
-        $_SESSION['token'] = md5(uniqid(mt_rand(), true));
-    }
-    if (isset($_POST['sendMail'])) {
-        // Get form data
-        $data = [
-            "name"    => filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
-            "email"   => filter_var($_POST['email'], FILTER_SANITIZE_EMAIL),
-            "subject" => filter_var($_POST['subject'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
-            "message" => filter_var($_POST['message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
-        ];
-        $name    = $data['name'];
-        $email   = $data['email'];
-        $message = $data['message'];
-        // Set recipient email address
-        $to = "soransalimmohammed@gmail.com";
+// <?php
+//     include 'config/databaseconnect.php';
+//     $successSendMail = "";
+//     session_start();
+//     if (! isset($_SESSION['token'])) {
+//         $_SESSION['token'] = md5(uniqid(mt_rand(), true));
+//     }
+//     if (isset($_POST['sendMail'])) {
+//         // Get form data
+//         $data = [
+//             "name"    => filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+//             "email"   => filter_var($_POST['email'], FILTER_SANITIZE_EMAIL),
+//             "subject" => filter_var($_POST['subject'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+//             "message" => filter_var($_POST['message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+//         ];
+//         $name    = $data['name'];
+//         $email   = $data['email'];
+//         $message = $data['message'];
+//         // Set recipient email address
+//         $to = "soransalimmohammed@gmail.com";
 
-        // Set email subject
-        $subject = $data['subject'];
+//         // Set email subject
+//         $subject = $data['subject'];
 
-        // Construct email body
-        $body = "Name: $name\n";
-        $body .= "Email: $email\n\n";
-        $body .= "Message:\n$message";
+//         // Construct email body
+//         $body = "Name: $name\n";
+//         $body .= "Email: $email\n\n";
+//         $body .= "Message:\n$message";
 
-        // Set headers
-        $headers = "From: $name <$email>\r\n";
-        $headers .= "Reply-To: $email\r\n";
+//         // Set headers
+//         $headers = "From: $name <$email>\r\n";
+//         $headers .= "Reply-To: $email\r\n";
 
-        // Send email
-        if (mail($to, $subject, $body, $headers)) {
-            $successSendMail = "showSuccess";
+//         // Send email
+//         if (mail($to, $subject, $body, $headers)) {
+//             $successSendMail = "showSuccess";
 
-        } else {
-            $successSendMail = "showError";
-        }
-    }
-?>
+//         } else {
+//             $successSendMail = "showError";
+//         }
+//     }
+// ?>
 <!DOCTYPE html>
 <html lang="en">
 
