@@ -1,4 +1,4 @@
-// <?php
+<?php
 //     include 'config/databaseconnect.php';
 //     $successSendMail = "";
 //     session_start();
